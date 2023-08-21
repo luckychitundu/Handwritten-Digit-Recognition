@@ -22,8 +22,8 @@ model.compile(optimizer="adam",loss="sparse_categorical_crossentropy",metrics=["
 model.fit(x_train,y_train,epochs=3)
 
 loss,accuracy = model.evaluate(x_test,y_test)
-print(loss)
-print(accuracy)
+print(f"Loss: {loss}")
+print(f"Accuracy: {accuracy}")
 
 for x in range(1,8):
     img = cv.imread(f"{x}.png")[:,:,0]
